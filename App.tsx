@@ -1,8 +1,8 @@
 import React from 'react';
-import {HomeScreen} from './src/screens/HomeScreen';
+import {AppNavigator} from './src/navigation/AppNavigator';
 
 function App(): React.JSX.Element {
-  return <HomeScreen />;
+  return <AppNavigator />;
 }
 
 export default App;
