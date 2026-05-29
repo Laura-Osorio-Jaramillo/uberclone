@@ -31,7 +31,7 @@ export function AppNavigator() {
             <Tab.Screen
             name="Profile"
             component={ProfileScreen}
-            options={{title: 'Mi cuenta'}}
+            options={{title: 'Perfil'}}
             />
         <Tab.Screen
             name="RideRequest"
