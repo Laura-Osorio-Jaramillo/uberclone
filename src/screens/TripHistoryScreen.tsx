@@ -4,8 +4,8 @@ import {StyleSheet, Text, View} from 'react-native';
 export function TripHistoryScreen() {
     return (
         <View style={styles.container}>
-        <Text style={styles.title}>Trip History</Text>
-        <Text style={styles.subtitle}>Completed trips with date and cost</Text>
+        <Text style={styles.title}>Historial de Viajes</Text>
+        <Text style={styles.subtitle}>Detalle de los Viajes</Text>
         </View>
     );
 }

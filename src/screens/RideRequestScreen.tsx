@@ -4,8 +4,8 @@ import {StyleSheet, Text, View} from 'react-native';
 export function RideRequestScreen() {
     return (
         <View style={styles.container}>
-        <Text style={styles.title}>Ride Request</Text>
-        <Text style={styles.subtitle}>Search destination and estimate ride fare</Text>
+        <Text style={styles.title}>Solicitud de Viaje</Text>
+        <Text style={styles.subtitle}>Busca tu destino y calcula la tarifa estimada</Text>
         </View>
     );
 }

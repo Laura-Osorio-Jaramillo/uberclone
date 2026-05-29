@@ -4,8 +4,8 @@ import {StyleSheet, Text, View} from 'react-native';
 export function TrackingScreen() {
     return (
         <View style={styles.container}>
-        <Text style={styles.title}>Tracking</Text>
-        <Text style={styles.subtitle}>Driver real-time tracking screen</Text>
+        <Text style={styles.title}>Tiempo Real</Text>
+        <Text style={styles.subtitle}>Visualización del conductor </Text>
         </View>
     );
 }

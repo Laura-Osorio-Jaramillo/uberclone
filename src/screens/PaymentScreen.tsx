@@ -4,8 +4,8 @@ import {StyleSheet, Text, View} from 'react-native';
 export function PaymentScreen() {
     return (
     <View style={styles.container}>
-        <Text style={styles.title}>Payment</Text>
-        <Text style={styles.subtitle}>Payment gateway integration screen</Text>
+        <Text style={styles.title}>Medios de Pago</Text>
+        <Text style={styles.subtitle}>Pasarela de pagos de la aplicación</Text>
     </View>
     );
 }

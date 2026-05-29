@@ -31,27 +31,27 @@ export function AppNavigator() {
             <Tab.Screen
             name="Profile"
             component={ProfileScreen}
-            options={{title: 'Profile'}}
+            options={{title: 'Mi cuenta'}}
             />
         <Tab.Screen
             name="RideRequest"
             component={RideRequestScreen}
-            options={{title: 'Ride'}}
+            options={{title: 'Mis Viajes'}}
             />
         <Tab.Screen
             name="Tracking"
             component={TrackingScreen}
-            options={{title: 'Tracking'}}
+            options={{title: 'Tiempo Real'}}
             />
         <Tab.Screen
             name="Payment"
             component={PaymentScreen}
-            options={{title: 'Payment'}}
+            options={{title: 'Pago'}}
             />
         <Tab.Screen
             name="TripHistory"
             component={TripHistoryScreen}
-            options={{title: 'History'}}
+            options={{title: 'Historial'}}
             />
         </Tab.Navigator>
     </NavigationContainer>

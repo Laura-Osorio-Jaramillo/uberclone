@@ -4,8 +4,8 @@ import {StyleSheet, Text, View} from 'react-native';
 export function ProfileScreen() {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Profile</Text>
-            <Text style={styles.subtitle}>User registration and profile data</Text>
+            <Text style={styles.title}>Mi cuenta</Text>
+            <Text style={styles.subtitle}>Registro y datos personales del usuario</Text>
         </View>
         );
 }
