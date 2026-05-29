@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Alert, Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
+import firestore from '@react-native-firebase/firestore';
 
 type GenderOption = 'Femenino' | 'Masculino' ;
 type LanguageOption = 'Español' | 'Inglés';
@@ -49,18 +50,35 @@ export function ProfileScreen() {
     return Object.keys(newErrors).length === 0;
     };
 
-    const handleSaveProfile = () => {
+    const handleSaveProfile = async () => {
         if (!validateForm()) {
         return;
         }
 
-    Alert.alert('Perfil guardado', 'La información fue validada correctamente.');
-    };
+        try {
+            await firestore()
+            .collection('users')
+            .doc('main-profile')
+            .set({
+                fullName,
+                phoneNumber,
+                gender,
+                email,
+                language,
+                updatedAt: firestore.FieldValue.serverTimestamp(),
+            })
 
-    const handlePhoneChange = (value: string) => {
-    const onlyNumbers = value.replace(/\D/g, '');
-    setPhoneNumber(onlyNumbers);
-    };
+    Alert.alert(
+        'Perfil guardado',
+        'La información fue guardada correctamente en Firebase.',
+        );
+    } catch (error) {
+            Alert.alert(
+            'Error',
+            'No fue posible guardar el perfil. Intenta nuevamente.',
+            );
+    }
+};
 
     return (
         <ScrollView style={styles.container} contentContainerStyle={styles.content}>
