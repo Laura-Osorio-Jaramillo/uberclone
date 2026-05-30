@@ -1,14 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {
-  Alert,
-  Image,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Alert,Image,ScrollView,StyleSheet,Text,TextInput,TouchableOpacity,View,} from 'react-native';
 import firestore from '@react-native-firebase/firestore';
 import {db, firebaseAuth} from '../services/firebase';
 
