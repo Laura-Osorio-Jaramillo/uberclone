@@ -9,51 +9,55 @@ import {PaymentScreen} from '../screens/PaymentScreen';
 import {TripHistoryScreen} from '../screens/TripHistoryScreen';
 
 export type RootTabParamList = {
-    Profile: undefined;
-    RideRequest: undefined;
-    Tracking: undefined;
-    Payment: undefined;
-    TripHistory: undefined;
+  Profile: undefined;
+  RideRequest: undefined;
+  Tracking: undefined;
+  Payment: undefined;
+  TripHistory: undefined;
 };
 
 const Tab = createBottomTabNavigator<RootTabParamList>();
 
 export function AppNavigator() {
-    return (
-        <NavigationContainer>
-        <Tab.Navigator
-            initialRouteName="RideRequest"
-            screenOptions={{
-            headerShown: true,
-            tabBarActiveTintColor: '#111827',
-            tabBarInactiveTintColor: '#6B7280',
-            }}>
-            <Tab.Screen
-            name="Profile"
-            component={ProfileScreen}
-            options={{title: 'Perfil'}}
-            />
+  return (
+    <NavigationContainer>
+      <Tab.Navigator
+        initialRouteName="RideRequest"
+        screenOptions={{
+          headerShown: true,
+          tabBarActiveTintColor: '#111827',
+          tabBarInactiveTintColor: '#6B7280',
+        }}>
         <Tab.Screen
-            name="RideRequest"
-            component={RideRequestScreen}
-            options={{title: 'Mis Viajes'}}
-            />
+          name="Profile"
+          component={ProfileScreen}
+          options={{title: 'Perfil'}}
+        />
+
         <Tab.Screen
-            name="Tracking"
-            component={TrackingScreen}
-            options={{title: 'Tiempo Real'}}
-            />
+          name="RideRequest"
+          component={RideRequestScreen}
+          options={{title: 'Solicitar'}}
+        />
+
         <Tab.Screen
-            name="Payment"
-            component={PaymentScreen}
-            options={{title: 'Pago'}}
-            />
+          name="Tracking"
+          component={TrackingScreen}
+          options={{title: 'Tiempo Real'}}
+        />
+
         <Tab.Screen
-            name="TripHistory"
-            component={TripHistoryScreen}
-            options={{title: 'Historial'}}
-            />
-        </Tab.Navigator>
+          name="Payment"
+          component={PaymentScreen}
+          options={{title: 'Pago'}}
+        />
+
+        <Tab.Screen
+          name="TripHistory"
+          component={TripHistoryScreen}
+          options={{title: 'Historial'}}
+        />
+      </Tab.Navigator>
     </NavigationContainer>
-    );
+  );
 }
